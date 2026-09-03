@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angelo Esperat | Virtual Assistant & Data Professional</title>
+<meta name="description" content="Portfolio of Angelo Esperat — detail-oriented professional with experience in data annotation, logistics, customer service, and ICT.">
+<style>
+:root{
+  --bg:#0b1120; --panel:#111a2e; --panel2:#17223a; --text:#f7f9fc;
+  --muted:#aab5c8; --accent:#63e6be; --accent2:#74c0fc; --line:#26334d;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(11,17,32,.82);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;font-size:1.15rem}.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:25px;color:var(--muted);font-size:.94rem}
+.nav-links a:hover{color:var(--text)}
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 70px;background:
+ radial-gradient(circle at 80% 25%,rgba(116,192,252,.13),transparent 30%),
+ radial-gradient(circle at 15% 75%,rgba(99,230,190,.09),transparent 28%)}
+.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:60px;align-items:center}
+.badge{display:inline-flex;gap:8px;align-items:center;padding:8px 13px;border:1px solid var(--line);border-radius:999px;color:var(--accent);background:rgba(99,230,190,.05);font-size:.85rem;margin-bottom:22px}
+h1{font-size:clamp(3rem,7vw,5.8rem);line-height:.95;letter-spacing:-.055em;margin-bottom:25px}
+.gradient{background:linear-gradient(100deg,var(--text),var(--accent2),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:1.15rem;color:var(--muted);max-width:680px}
+.cta{display:flex;gap:13px;margin-top:30px;flex-wrap:wrap}
+.btn{padding:12px 19px;border-radius:10px;border:1px solid var(--line);font-weight:700;transition:.2s}
+.btn.primary{background:var(--accent);color:#06100d;border-color:var(--accent)}
+.btn:hover{transform:translateY(-2px)}
+.profile-card{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:0 25px 80px rgba(0,0,0,.28)}
+.avatar{height:150px;width:150px;border-radius:50%;display:grid;place-items:center;margin:0 auto 20px;background:linear-gradient(135deg,var(--accent2),var(--accent));color:#07111c;font-size:3rem;font-weight:900}
+.profile-card h3{text-align:center;font-size:1.4rem}.profile-card p{text-align:center;color:var(--muted);margin-top:5px}
+.quick{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:25px}
+.quick div{padding:12px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.02);font-size:.86rem}.quick b{display:block;color:var(--text)}
+section{padding:105px 0;border-top:1px solid rgba(255,255,255,.05)}
+.section-head{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:42px}
+.eyebrow{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.13em;font-size:.78rem}
+h2{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.04em;margin-top:8px}
+.section-head p{color:var(--muted);max-width:470px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px}
+.card h3{margin-bottom:10px}.card p{color:var(--muted)}
+.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.skill{padding:9px 12px;border-radius:9px;background:var(--panel2);border:1px solid var(--line);font-size:.9rem;color:#dce4f1}
+.timeline{display:grid;gap:18px}
+.job{display:grid;grid-template-columns:180px 1fr;gap:28px;padding:26px;background:var(--panel);border:1px solid var(--line);border-radius:18px}
+.date{color:var(--accent);font-size:.9rem;font-weight:700}.company{color:var(--accent2);font-weight:700;margin:4px 0 12px}.job ul{padding-left:18px;color:var(--muted)}.job li+li{margin-top:7px}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.service{padding:27px;background:var(--panel);border:1px solid var(--line);border-radius:18px}.icon{font-size:1.7rem;margin-bottom:14px}.service p{color:var(--muted);margin-top:8px}
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact{background:linear-gradient(145deg,#111c31,#0e1729);border:1px solid var(--line);border-radius:25px;padding:45px;display:flex;justify-content:space-between;gap:30px;align-items:center}.contact p{color:var(--muted);margin-top:8px}.contact-links{display:flex;gap:10px;flex-wrap:wrap}
+footer{padding:35px 0;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+@media(max-width:800px){
+ .nav-links{display:none}.hero-grid,.about-grid,.edu{grid-template-columns:1fr}.hero{padding-top:110px}.services{grid-template-columns:1fr}.job{grid-template-columns:1fr;gap:8px}.contact{display:block}.contact-links{margin-top:22px}
+}
+</style>
+</head>
+<body>
+<nav><div class="container nav-inner">
+  <a class="logo" href="#home">Angelo<span>.</span></a>
+  <div class="nav-links">
+    <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#services">Services</a><a href="#contact">Contact</a>
+  </div>
+</div></nav>
+
+<main id="home">
+<section class="hero">
+<div class="container hero-grid">
+  <div>
+    <div class="badge">● Available for remote opportunities</div>
+    <h1>Angelo <span class="gradient">Esperat</span></h1>
+    <p>Detail-oriented professional building a career in remote support, virtual assistance, data operations, and customer service — backed by hands-on experience in AI data annotation, logistics, retail, and ICT.</p>
+    <div class="cta">
+      <a class="btn primary" href="#contact">Let's Work Together</a>
+      <a class="btn" href="mailto:angelolagria22@gmail.com">Email Me</a>
+    </div>
+  </div>
+  <aside class="profile-card">
+    <div class="avatar">AE</div>
+    <h3>Virtual Assistant • Data Support</h3>
+    <p>ICT background · NC II certified</p>
+    <div class="quick">
+      <div><b>Based in</b>Dumaguete City, PH</div>
+      <div><b>Languages</b>English · Filipino · Chavacano</div>
+      <div><b>Focus</b>Remote / Long-term</div>
+      <div><b>Strength</b>Attention to detail</div>
+    </div>
+  </aside>
+</div>
+</section>
+
+<section id="about"><div class="container">
+<div class="section-head"><div><div class="eyebrow">01 — About</div><h2>Reliable, adaptable, detail-focused.</h2></div>
+<p>I bring practical experience across digital data work, customer-facing operations, logistics, and computer systems support.</p></div>
+<div class="about-grid">
+<div class="card"><h3>Professional Profile</h3><p>Detail-oriented professional with experience across data annotation, technical operations, logistics, and retail customer service. I’m comfortable following detailed guidelines, maintaining accuracy, solving problems, and working independently or with a team.</p></div>
+<div class="card"><h3>What I Bring</h3><p>Strong organization, quality control, customer relations, time management, and a willingness to learn new tools and workflows quickly.</p><div class="skills"><span class="skill">Accuracy</span><span class="skill">Organization</span><span class="skill">Problem Solving</span><span class="skill">Customer Focus</span><span class="skill">Fast Learner</span></div></div>
+</div></div></section>
+
+<section id="experience"><div class="container">
+<div class="section-head"><div><div class="eyebrow">02 — Experience</div><h2>Hands-on experience.</h2></div></div>
+<div class="timeline">
+<div class="job"><div class="date">Jan 2026 — Jun 2026</div><div><h3>Data Annotator</h3><div class="company">Remotask</div><ul><li>Annotated and labeled complex datasets for AI and machine learning projects with high accuracy.</li><li>Evaluated AI model outputs for quality control and compliance with project guidelines.</li><li>Collaborated with technical teams to identify and resolve data discrepancies.</li></ul></div></div>
+<div class="job"><div class="date">Feb 2024 — Sep 2024</div><div><h3>Delivery Rider</h3><div class="company">J&T Express</div><ul><li>Managed secure, time-sensitive deliveries while maintaining customer satisfaction.</li><li>Optimized daily routes to improve delivery efficiency and handled necessary documentation.</li><li>Resolved customer inquiries during parcel handovers.</li></ul></div></div>
+<div class="job"><div class="date">Oct 2023 — Feb 2024</div><div><h3>Sales Associate</h3><div class="company">KCC Mall de Zamboanga</div><ul><li>Assisted customers with product selection and provided product information.</li><li>Supported store operations, merchandise organization, and inventory tracking.</li><li>Delivered fast, welcoming service to support customer satisfaction and team targets.</li></ul></div></div>
+</div></div></section>
+
+<section id="skills"><div class="container">
+<div class="section-head"><div><div class="eyebrow">03 — Skills</div><h2>Tools & strengths.</h2></div></div>
+<div class="about-grid">
+<div class="card"><h3>Technical Skills</h3><div class="skills"><span class="skill">Microsoft Office</span><span class="skill">Google Workspace</span><span class="skill">Data Annotation & Labeling</span><span class="skill">Computer Systems Troubleshooting</span><span class="skill">Quality Control</span><span class="skill">Route Optimization</span><span class="skill">Inventory Tracking</span><span class="skill">Logistics Support</span></div></div>
+<div class="card"><h3>Core Competencies</h3><div class="skills"><span class="skill">Attention to Detail</span><span class="skill">Time Management</span><span class="skill">Clear Communication</span><span class="skill">Critical Thinking</span><span class="skill">Problem-Solving</span><span class="skill">Team Collaboration</span><span class="skill">Customer Relations</span><span class="skill">Leadership</span></div></div>
+</div></div></section>
+
+<section id="services"><div class="container">
+<div class="section-head"><div><div class="eyebrow">04 — Services</div><h2>How I can help.</h2></div><p>Positioned for remote roles where accuracy, organization, communication, and consistency matter.</p></div>
+<div class="services">
+<div class="service"><div class="icon">⌘</div><h3>Virtual Assistance</h3><p>Administrative support, data entry, organization, documentation, and day-to-day task coordination.</p></div>
+<div class="service"><div class="icon">◈</div><h3>Data Support</h3><p>Data annotation, labeling, quality checking, review, and structured data tasks requiring close attention.</p></div>
+<div class="service"><div class="icon">◎</div><h3>Customer Support</h3><p>Professional customer communication, inquiry handling, follow-ups, and service-focused remote support.</p></div>
+</div></div></section>
+
+<section id="education"><div class="container">
+<div class="section-head"><div><div class="eyebrow">05 — Education</div><h2>Education & certification.</h2></div></div>
+<div class="edu">
+<div class="card"><h3>Senior High School — ICT Strand</h3><p>Sinunuc National High School · 2021–2023</p></div>
+<div class="card"><h3>Junior High School</h3><p>Sinunuc National High School · 2016–2021</p></div>
+<div class="card"><h3>TESDA National Certificate II</h3><p>Computer Systems Servicing · 2024</p></div>
+</div></div></section>
+
+<section id="contact"><div class="container">
+<div class="contact"><div><div class="eyebrow">06 — Contact</div><h2>Let's build something reliable.</h2><p>Open to remote opportunities in virtual assistance, data support, customer service, and related roles.</p></div>
+<div class="contact-links"><a class="btn primary" href="mailto:angelolagria22@gmail.com">angelolagria22@gmail.com</a><a class="btn" href="tel:+639277991249">+63 927 799 1249</a></div></div>
+</div></section>
+</main>
+<footer><div class="container">© 2026 Angelo Esperat. Built for remote opportunities.</div></footer>
+</body>
+</html>
